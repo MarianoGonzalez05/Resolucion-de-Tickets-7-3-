@@ -1,140 +1,163 @@
-# Resolucion de tickets
+# Resolución de Tickets
 
-### aca va a estar paso a paso como copiar y pegar el sistema, y como mostrar y chequear que funcione cada ticket correctamente + imagenes
+#### A continuación, se detalla paso a paso cómo copiar y pegar el sistema, además de verificar y probar que cada ticket funcione correctamente. También se incluyen imágenes de referencia.
 
-## Requisitos:
+---
 
-Antes que nada, al descargar el repositorio, van a tener que descargar Composer:  
-[Click aca para descarga](https://getcomposer.org/download/)
+## Requisitos
 
-Aparecerá una página así:  
-![latest.png](latest.png)  
-Clickear donde dice "latest stable" y se descargará automáticamente.
+1. **Descargar Composer**  
+   Antes de comenzar, asegúrate de descargar Composer:  
+   [Click aquí para descargar](https://getcomposer.org/download/)
 
-⚠️ Asegurarse que se descargó en la carpeta descargas para evitar errores ⚠️
+   Al abrir el enlace, verás una página como esta:  
+   ![latest.png](latest.png)
 
-Hacer click derecho en el archivo que se descargó y clickear en donde diga "propiedades".  
-Aparecerá una ventana así:  
-![propiedades.png](propiedades.png)
+   Click en "latest stable" y el archivo se descargará automáticamente.
 
-Copiar la ruta que aparece en Ubicación.  
-Apretar Windows y buscar "Editar variables de entorno" y abrir el que se ve así:  
-![variables.png](variables.png)
+   > ⚠️ **Asegúrate de que se haya descargado en la carpeta "Descargas" para evitar errores.**
 
-Clickear en donde dice "variables de entorno" y se va a abrir una ventana así:  
-![path.png](path.png)
+2. **Configurar las variables de entorno**  
+   - Haz click derecho en el archivo descargado y selecciona "Propiedades".  
+   - Verás una ventana similar a esta:  
+     ![propiedades.png](propiedades.png)  
+   - Copia la ruta que aparece en la sección "Ubicación".  
+   - A continuación, presiona la tecla Windows y busca "Editar variables de entorno". Abre la ventana que se ve así:  
+     ![variables.png](variables.png)  
+   - En la ventana que aparece, selecciona "Variables de entorno". Verás la siguiente imagen:  
+     ![path.png](path.png)  
+   - Selecciona "Path" y haz click en "Editar". **Realiza esto tanto en las variables del sistema como en las del usuario.**
+   - Haz click en "Nuevo" y pega la dirección copiada anteriormente.  
+     ![direccion.png](direccion.png)  
+   - Acepta todos los cambios y cierra las ventanas.
 
-Hacer click en donde dice "Path" y después en "Editar" _(esto hacer tanto en el de arriba como en el de abajo)_.  
-Hacer click en "Nuevo" y pegar la dirección que copiamos en las propiedades del archivo de Composer.  
-![direccion.png](direccion.png)
-
-Aceptar todo y cerrar.
+---
 
 ## Importar la base de datos
 
-En PhpMyAdmin, clickamos en crear una nueva base de datos.  
-**Obviamente hace falta tener iniciado XAMPP con MySQL y Apache.**  
-![nueva.png](nueva.png)
+1. Abre **PhpMyAdmin** y crea una nueva base de datos.  
+   > **Es necesario tener iniciado XAMPP con MySQL y Apache.**
 
-Poner el nombre exactamente como se muestra en la imagen y creamos, sin crear ninguna tabla ni nada:  
-![name.png](name.png)
+   ![nueva.png](nueva.png)
 
-Vamos a donde dice "Importar":  
-![imp.png](imp.png)
+2. Poner el nombre exactamente como se muestra en la imagen y crea la base de datos (no es necesario crear tablas):  
+   ![name.png](name.png)
 
-Donde dice "Seleccionar archivo", seleccionamos el archivo que está en la carpeta "sql" de la carpeta que descargamos de GitHub:  
-![archimp.png](archimp.png)
+3. Ve a la pestaña **Importar**:  
+   ![imp.png](imp.png)
 
-Bajar y darle al botón de "Importar".  
-**Es normal que salga un error de que ya existe "X" tabla, ignorar.**
+4. Selecciona el archivo SQL que se encuentra en la carpeta "sql" del repositorio descargado de GitHub.  
+   ![archimp.png](archimp.png)
 
-Ir a la tabla "carteles" y clickear donde dice "Insertar".  
-![inser.png](inser.png)
+5. Haz click en "Importar".  
+   > **Es normal que aparezca un error indicando que una tabla ya existe. Puedes ignorarlo.**
 
-Poner cualquier cosa excepto en el campo que dice "AGENDA", reemplazar por "Ayuda" _(con la mayúscula al inicio)_.  
-![cat.png](cat.png)
+6. Ve a la tabla **carteles** y haz click en "Insertar".  
+   ![inser.png](inser.png)
 
-Click en "Continuar" y listo.
+7. Rellena los campos con cualquier valor, excepto el campo **AGENDA**, donde debes poner "Ayuda" (con la inicial en mayúscula).  
+   ![cat.png](cat.png)
+
+8. Haz click en "Continuar" y habrás completado este paso.
+
+---
 
 ## 3.2
 
-- Apuntar a las URL's de los CDN de internet todos los archivos necesarios del Bootstrap, JS, etc.
-- Eliminar los archivos innecesarios del directorio Bootstrap de la raíz del sitio.
+- Apuntar a las URL's de los CDN de internet para todos los archivos necesarios (Bootstrap, JS, etc.).
+- Eliminar los archivos innecesarios del directorio Bootstrap en la raíz del sitio.
 
-_Este ya viene hecho en el código, no hace falta hacer nada._
+_Este paso ya está realizado en el código, no es necesario hacer nada más._
+
+---
 
 ## 3.3
 
-- Personalizar la aplicación con tu nombre, poniendo un logo en el menú como se muestra en la imagen:
+- Personalizar la aplicación con tu nombre y agregar un logo en el menú.
 
-Vamos al archivo llamado `menu_bs.php`, lo abrimos, hacer Ctrl + F y buscar "mariano", ahí reemplazamos con tu nombre y listo:  
-![nombre.png](nombre.png)
+1. Abre el archivo `menu_bs.php`, presiona **Ctrl + F** y busca "mariano".  
+2. Reemplaza "mariano" con tu nombre.  
+   ![nombre.png](nombre.png)
 
-El punto estaría hecho.
+---
 
 ## 3.4
 
 - Unificar el archivo `config.php` para que los datos de conexión a MySQL se encuentren en un único archivo.
 
-_Esto también viene hecho, no hace falta hacer nada._
+_Este paso también está realizado en el código._
+
+---
 
 ## 3.5
 
 - Agregar dos nuevos diseños a las plantillas de la cartelera.
 
-Iniciar sesión con el usuario "lp" y usando la contraseña 1234:  
-![logi.png](logi.png)
+1. Inicia sesión con el usuario "lp" y la contraseña **1234**:  
+   ![logi.png](logi.png)
 
-Ir a "Cartelera" y en las categorías están las distintas plantillas, es lo que se pide mostrar:  
-![cartel.png](cartel.png)
+2. Ve a **Cartelera** y selecciona las distintas plantillas. Es lo que se pide mostrar:  
+   ![cartel.png](cartel.png)
+
+---
 
 ## 3.6
 
-- Agregar al menú de acceso público una nueva opción ("Ayuda") y una nueva categoría de carteles ("Ayuda") que solo se cargan cuando se accede a la nueva opción del menú.
+- Agregar al menú público una nueva opción **"Ayuda"** y una nueva categoría de carteles **"Ayuda"** que solo se cargan al acceder a dicha opción.
 
-En el archivo `menu_bs.php`, ir a la parte donde se encuentra la navbar:  
-![nav.png](nav.png)
+1. En el archivo `menu_bs.php`, dirígete a la sección donde se encuentra la barra de navegación:  
+   ![nav.png](nav.png)
 
-La línea de código que se agregó es la siguiente (por si se pide mostrarla):  
-![line.png](line.png)
+2. La línea de código que se agregó es la siguiente:  
+   ![line.png](line.png)
 
-Ir a donde dice "Ayuda" y aparecerá lo siguiente, es lo que hay que mostrar:  
-![ayuda.png](ayuda.png)
+3. Ve a la opción **"Ayuda"** y debería aparecer algo similar a esto:  
+   ![ayuda.png](ayuda.png)
+
+---
 
 ## 3.7
 
-- En la sección de publicaciones digitales ya existente, agregar la posibilidad de vista previa para material de distinto tipo como audios y videos.
+- Agregar la posibilidad de vista previa para audios y videos en la sección de publicaciones digitales.
 
-Descargar primero un video y un audio en formato **MP4** para el video y **MP3** para el audio.  
-Ir a "Libros digitales" y hacer click en el botón que dice "Alta":  
-![audvideo.png](audvideo.png)
+1. Descarga un video en formato **MP4** y un audio en formato **MP3**.  
+2. Ve a **Libros digitales** y haz click en el botón **"Alta"**:  
+   ![audvideo.png](audvideo.png)
 
-Rellenar con el nombre y título, autor, etc., en donde dice tipo, para el video poner "video" y para el audio poner "audiotexto". Luego, dar click en "Choose File".  
-Guardar el archivo en la carpeta llamada `libros_d`:  
-![librod.png](librod.png)
+3. Rellena los campos con el nombre, título, autor, etc.  
+4. En el campo **tipo**, selecciona **video** o **audiotexto** según corresponda.  
+5. Sube el archivo guardado en la carpeta `libros_d`:  
+   ![librod.png](librod.png)
 
-Dar click en "Agregar".  
-Para verlo, clickear en "Buscar", buscar nuestro video y audio, y apretar el botón "min":  
-![min.png](min.png)
+6. Haz click en **Agregar**.  
+7. Para ver el resultado, ve a la pestaña **Buscar**, encuentra tu video o audio y haz click en el botón **min**:  
+   ![min.png](min.png)
 
-En su caso, se va a ver el video o audio.
+---
 
 ## 3.8
 
-- Agregar la opción de material impreso (libros) y la posibilidad de controlar y administrar los préstamos que se realizan a los socios de la biblioteca. Para ello, crear las tablas necesarias en la base de datos ya existente y las nuevas librerías.
+- Agregar la opción de material impreso (libros) y la posibilidad de controlar los préstamos a los socios de la biblioteca.
 
-**Es el que falta, si alguien sabe hacerlo me lo dice, graciasss.**
+**Este paso está pendiente. Si alguien sabe cómo hacerlo, por favor avísame. ¡Gracias!**
+
+---
 
 ## 3.9
 
-- Agregar en la pantalla del administrador (dentro del menú principal) un indicador en tiempo real de los usuarios que en ese momento hayan iniciado sesión en el sitio (utilizar websockets).
+- Agregar en la pantalla del administrador un indicador en tiempo real de los usuarios que hayan iniciado sesión (utilizando websockets).
 
-Vamos al archivo `server.php`, pulsar Ctrl + Shift + P para abrir una terminal, y en la terminal escribir lo siguiente:  
-![server.png](server.png)
+1. Abre el archivo `server.php`, presiona **Ctrl + Shift + P** para abrir una terminal.  
+2. En la terminal, escribe el siguiente comando:  
+   ![server.png](server.png)
 
-Dar Enter, ir a la página y recargarla hasta que el contador aparezca en uno. Para ver si sube, abrir otra pestaña con la página y debería sumar como otro usuario conectado:  
-![user.png](user.png)
+3. Presiona **Enter** y recarga la página.  
+4. Si el contador aparece como uno, abre otra pestaña de la página para ver cómo se suma otro usuario conectado:  
+   ![user.png](user.png)
+
+---
 
 ## Eso es todo
 
-Si algo no funciona, me avisan. Si hay que cambiar algo, aviso por el grupo y hago el respectivo cambio acá. Si funciona, se agradece que alguien me compre algo ❤️❤️
+Si algo no funciona, por favor avísenme. Si hay que cambiar algo, lo haré saber por el grupo y actualizaré este README.  
+Si todo funciona correctamente, ¡agradezco que alguien me compre algo! ❤️❤️
