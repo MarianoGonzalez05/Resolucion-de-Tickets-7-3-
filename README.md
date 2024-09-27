@@ -159,5 +159,5 @@ _Este paso también está realizado en el código._
 
 ## Eso es todo
 
-Si algo no funciona, por favor avísenme. Si hay que cambiar algo, lo haré saber por el grupo y actualizaré este README.  
-Si todo funciona correctamente, ¡agradezco que alguien me compre algo! ❤️❤️
+Si algo no funciona, por favor avísenme. Si hay que cambiar algo, aviso por el grupo y actualizo esto.  
+Si todo funciona bien, agradezco que alguien me compre algo ❤️❤️
